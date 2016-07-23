@@ -1,7 +1,7 @@
 node {
 
   stage 'checkout project'
-  git url: 'https://github.com/agileworks-tw/spring-boot-sample.git'
+  git url: 'https://github.com/nikanwang/spring-boot-sample.git'
 
   stage 'check docker env'
 
@@ -33,7 +33,7 @@ node {
   sh "make build-docker-prod-image"
 
   stage 'publish docker production image'
-  sh "docker push agileworks/java_sample_prod"
+  sh "docker push nikanwang/java_sample_prod"
 
   stage 'deploy production'
   sh "make deploy-production"
